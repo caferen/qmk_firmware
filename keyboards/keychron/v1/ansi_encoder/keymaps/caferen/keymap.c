@@ -93,6 +93,14 @@ tap_dance_action_t tap_dance_actions[] = {
     [SPC_UTILS] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, ql_finished, ql_reset)
 };
 
+// LAYOUT_ansi_82(
+//     _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,    _______,  _______,            _______,
+//     _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,    _______,  _______,            _______,
+//     _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,    _______,  _______,            _______,
+//     _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,              _______,            _______,
+//     _______,            _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,              _______,  _______,
+//     _______,  _______,  _______,                                _______,                                _______,  _______,    _______,  _______,  _______,  _______),
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [GAMING] = LAYOUT_ansi_82(
         KC_ESC,   KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,     KC_F12,   KC_DEL,             KC_MUTE,
@@ -100,14 +108,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_LBRC,    KC_RBRC,  KC_BSLS,            KC_PGDN,
         KC_BSPC,  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,     KC_H,     KC_J,     KC_K,     KC_L,     KC_SCLN,  KC_QUOT,              KC_ENT,             KC_HOME,
         KC_LSFT,            KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,              KC_RSFT,  KC_UP,
-        KC_LCTL,  KC_LOPT,  KC_LCMD,                                KC_SPC,                                 KC_RCMD,  MO(MAC_FN), KC_RCTL,  KC_LEFT,  KC_DOWN,  KC_RGHT),
+        KC_LCTL,  KC_LOPT,  KC_LGUI,                                KC_SPC,                                 KC_RGUI,  MO(MAC_FN), KC_RCTL,  KC_LEFT,  KC_DOWN,  KC_RGHT),
 
     [MAC_FN] = LAYOUT_ansi_82(
-        _______,  KC_BRID,  KC_BRIU,  KC_NO,    KC_NO,    RGB_VAD,  RGB_VAI,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,    KC_VOLU,  _______,             RGB_TOG,
         _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,    _______,  _______,            _______,
-        RGB_TOG,  RGB_MOD,  RGB_VAI,  RGB_HUI,  RGB_SAI,  RGB_SPI,  _______,  _______,  _______,  _______,  _______,  _______,    _______,  _______,            _______,
-        _______,  RGB_RMOD, RGB_VAD,  RGB_HUD,  RGB_SAD,  RGB_SPD,  _______,  _______,  _______,  _______,  _______,  _______,              _______,            _______,
-        _______,            _______,  _______,  _______,  _______,  _______,  NK_TOGG,  _______,  _______,  _______,  _______,              _______,  _______,
+        _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,    _______,  _______,            _______,
+        _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,    _______,  _______,            _______,
+        _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,              _______,            _______,
+        _______,            _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,              _______,  _______,
         _______,  _______,  _______,                                _______,                                _______,  _______,    _______,  _______,  _______,  _______),
 
     [COLEMAK] = LAYOUT_ansi_82(
@@ -116,14 +124,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,   KC_Q,     KC_W,     KC_F,     KC_P,     KC_G,     KC_J,     KC_L,     KC_U,     KC_Y,     CW_TOGG,  KC_LBRC,    KC_RBRC,  KC_BSLS,            KC_PGDN,
         KC_BSPC,  LCTL_T(KC_A),       LGUI_T(KC_S),       LALT_T(KC_R),       LSFT_T(KC_T),     KC_D,     KC_H,     RSFT_T(KC_N),     RALT_T(KC_E),     RGUI_T(KC_I),     RCTL_T(KC_O),     KC_SCLN,              KC_ENT,             KC_HOME,
         KC_LSFT,            MEH_T(KC_Z),     KC_X,     KC_C,     KC_V,     HYPR_T(KC_B),     KC_K,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,              KC_RSFT,  KC_UP,
-        KC_LCTL,  KC_LCMD,  KC_LALT,                                TD(SPC_UTILS),                                 KC_RALT,  MO(UTILS), KC_RCTL,  KC_LEFT,  KC_DOWN,  KC_RGHT),
+        KC_LCTL,  KC_LALT,  KC_LGUI,                                 TD(SPC_UTILS),                                 KC_RGUI,  MO(UTILS), KC_RCTL,  KC_LEFT,  KC_DOWN,  KC_RGHT),
 
     [UTILS] = LAYOUT_ansi_82(
         KC_NO,  KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,     KC_F12,   KC_NO,            RGB_TOG,
         KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,    KC_NO,  KC_NO,            KC_NO,
         KC_NO,   KC_1,     KC_2,     KC_3,     KC_4,     KC_5,     KC_6,     KC_7,     KC_8,     KC_9,     KC_0,    KC_NO,    KC_NO,  KC_NO,            KC_PGUP,
         KC_BSPC,  KC_ESC,   KC_LBRC,  KC_RBRC,  KC_TAB,   KC_GRV,   KC_BSLS,  KC_LEFT,  KC_DOWN,   KC_UP,   KC_RIGHT,  KC_MINS,              KC_NO,            KC_NO,
-        KC_NO,            KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_EQL,  KC_NO,  KC_NO,  KC_NO,  KC_NO,              KC_NO,  KC_NO,
+        KC_LSFT,            KC_NO,  KC_NO,  KC_NO,  KC_QUOT,  KC_NO,  KC_EQL,  KC_NO,  KC_NO,  KC_NO,  KC_NO,              KC_NO,  KC_NO,
         KC_LCTL,  KC_LALT,  KC_NO,                                KC_NO,                                KC_NO,  KC_NO,    KC_NO,  KC_NO,  KC_NO,  KC_NO),
 };
 
