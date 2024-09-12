@@ -111,20 +111,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LCTL,  KC_LOPT,  KC_LGUI,                                KC_SPC,                                 KC_RGUI,  MO(MAC_FN), KC_RCTL,  KC_LEFT,  KC_DOWN,  KC_RGHT),
 
     [MAC_FN] = LAYOUT_ansi_82(
+        KC_ESC,   KC_BRID,  KC_BRIU,  KC_TASK,  KC_FLXP,  RGB_VAD,  RGB_VAI,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,    KC_VOLU,  KC_DEL,             RGB_TOG,
         _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,    _______,  _______,            _______,
-        _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,    _______,  _______,            _______,
-        _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,    _______,  _______,            _______,
-        _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,              _______,            _______,
+        _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,    _______,  _______,            MEH(KC_F1),
+        _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,              _______,            RCS(KC_F12),
         _______,            _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,              _______,  _______,
         _______,  _______,  _______,                                _______,                                _______,  _______,    _______,  _______,  _______,  _______),
 
     [COLEMAK] = LAYOUT_ansi_82(
         KC_ESC,   KC_BRID,  KC_BRIU,  KC_TASK,  KC_FLXP,  RGB_VAD,  RGB_VAI,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,    KC_VOLU,  KC_DEL,             KC_MUTE,
         KC_GRV,   KC_1,     KC_2,     KC_3,     KC_4,     KC_5,     KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     KC_MINS,    KC_EQL,   CW_TOGG,            QK_AUTO_SHIFT_ON,
-        KC_TAB,   KC_Q,     KC_W,     KC_F,     KC_P,     KC_G,     KC_J,     KC_L,     KC_U,     KC_Y,     CW_TOGG,  KC_LBRC,    KC_RBRC,  KC_BSLS,            KC_PGDN,
-        KC_BSPC,  LCTL_T(KC_A),       LGUI_T(KC_S),       LALT_T(KC_R),       LSFT_T(KC_T),     KC_D,     KC_H,     RSFT_T(KC_N),     RALT_T(KC_E),     RGUI_T(KC_I),     RCTL_T(KC_O),     KC_SCLN,              KC_ENT,             KC_HOME,
+        KC_TAB,   KC_Q,     KC_W,     KC_F,     KC_P,     KC_G,     KC_J,     KC_L,     KC_U,     KC_Y,     CW_TOGG,  KC_LBRC,    KC_RBRC,  KC_BSLS,            MEH(KC_F1),
+        KC_BSPC,  LCTL_T(KC_A),       LGUI_T(KC_S),       LALT_T(KC_R),       LSFT_T(KC_T),     KC_D,     KC_H,     RSFT_T(KC_N),     RALT_T(KC_E),     RGUI_T(KC_I),     RCTL_T(KC_O),     KC_SCLN,              KC_ENT,             RCS(KC_F12),
         KC_MEH,   KC_Z,     KC_X,     KC_C,     HYPR_T(KC_V),     KC_B,     HYPR_T(KC_K),     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,              LM(UTILS, MOD_LSFT),  KC_UP,
-        KC_LCTL,  KC_LALT,  KC_LGUI,                                 LC(UTILS, KC_SPC),                                 KC_RGUI,  MO(UTILS), KC_RCTL,  KC_LEFT,  KC_DOWN,  KC_RGHT),
+        KC_LCTL,  KC_LALT,  KC_LGUI,                                 LT(UTILS, KC_SPC),                                 KC_RGUI,  MO(UTILS), KC_RCTL,  KC_LEFT,  KC_DOWN,  KC_RGHT),
 
     [UTILS] = LAYOUT_ansi_82(
         KC_NO,  KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,     KC_F12,   KC_NO,            RGB_TOG,
